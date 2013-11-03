@@ -8,7 +8,7 @@ set -ex
 rm -f *.o *.a
 $CC -s -Os -W -Wall \
     -Wno-unused-parameter \
-    -DHAVE_CONFIG_H -DMISSING_GLOB_PATTERN_P -D_GNU_SOURCE -c \
+    -DHAVE_CONFIG_H -D_GNU_SOURCE -c \
     popt.c poptparse.c poptconfig.c popthelp.c poptint.c
 $AR cr libpopt.a *.o
 $RANLIB libpopt.a
